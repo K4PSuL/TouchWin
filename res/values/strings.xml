@@ -14,6 +14,7 @@
     <string name="login">Login</string>
 	<string name="pwd">Password</string>
 	<string name="btn_connection">Connexion</string>
+	<string name="btn_addData">AddData</string>
 	
 	<!-- activity_settings -->
 	<string name="title_settings">Paramètres</string>
