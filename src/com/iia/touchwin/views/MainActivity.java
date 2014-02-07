@@ -6,7 +6,6 @@ import com.iia.touchwin.R;
 import com.iia.touchwin.utils.*;
 import com.iia.touchwin.entities.*;
 import com.iia.touchwin.contracts.*;
-import com.tommy.entity.UserContract;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -55,6 +54,16 @@ public class MainActivity extends Activity {
 
 				if (oCursor.moveToFirst()) {
 					
+					@SuppressWarnings("deprecation")
+					Date dateCreate = new Date(oCursor.getString((oCursor
+							.getColumnIndex(PlayerContract.COL_DATECREATE))));
+					
+					@SuppressWarnings("deprecation")
+					Date dateBirth = new Date(oCursor.getString((oCursor
+							.getColumnIndex(PlayerContract.COL_BIRTHDATE))));
+					
+
+					
 					Player thePlayer = new Player();
 					thePlayer.setId(oCursor.getInt((oCursor
 							.getColumnIndex(PlayerContract.COL_ID))));
@@ -62,14 +71,10 @@ public class MainActivity extends Activity {
 							.getColumnIndex(PlayerContract.COL_LOGIN))));
 					thePlayer.setPassword(oCursor.getString((oCursor
 							.getColumnIndex(PlayerContract.COL_PASSWORD))));
-					thePlayer.setDateCreate(oCursor.getString((oCursor
-							.getColumnIndex(PlayerContract.COL_DATECREATE))));
+					thePlayer.setDateCreate(dateCreate);
 					thePlayer.setAvatar(oCursor.getString((oCursor
 							.getColumnIndex(PlayerContract.COL_AVATAR))));
-					thePlayer.setEnable(oCursor.getInt((oCursor
-							.getColumnIndex(PlayerContract.COL_ENABLE))));
-					thePlayer.setBirthDate(oCursor.getString((oCursor
-							.getColumnIndex(PlayerContract.COL_BIRTHDATE))));
+					thePlayer.setBirthdate(dateBirth);
 					
 					Bundle dataBundle = new Bundle();
 					dataBundle.putSerializable(Const.BUNDLE_PLAYER, (Player) thePlayer);
