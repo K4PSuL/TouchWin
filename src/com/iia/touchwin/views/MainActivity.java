@@ -62,8 +62,6 @@ public class MainActivity extends Activity {
 					Date dateBirth = new Date(oCursor.getString((oCursor
 							.getColumnIndex(PlayerContract.COL_BIRTHDATE))));
 					
-
-					
 					Player thePlayer = new Player();
 					thePlayer.setId(oCursor.getInt((oCursor
 							.getColumnIndex(PlayerContract.COL_ID))));
