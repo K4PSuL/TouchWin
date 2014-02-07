@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TouchWin</string>
+    <string name="action_settings">Settings</string>
+    <string name="img_logo">Logo</string>
+    
+    <!-- activity_main -->
+    <string name="btn_play">Jouer</string>
+    <string name="btn_stats">Statistiques</string>
+    <string name="btn_settings">Paramètres</string>
+    
+    <!-- activity_connection -->
+    <string name="login">Login</string>
+	<string name="pwd">Password</string>
+	<string name="btn_connection">Connexion</string>
+	
+	<!-- activity_settings -->
+	<string name="btn_valid">Valider</string>
+	
+</resources>
